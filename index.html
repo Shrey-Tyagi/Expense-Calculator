@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+   
+    <title>Personal Expense</title>
+</head>
+<body>
+    <!-- <h1 id="HeadingEle"></h1>
+    <input id="ammount" type="text"></input>
+    <button id="btnCtr">+</button> -->
+    <h1 id="headingTotal"></h1>
+    <input id="inputAmmount" type="text"></input>
+    <button id="btnAddExpense">+</button>
+</body>
+<script> 
+    // let totalExpense=0;
+    // const hele = document.querySelector("#HeadingEle");
+    // hele.textContent = totalExpense;
+    // function ctrinc(){
+    // const InEle = document.querySelector("#ammount");
+    // const TextAmm = InEle.value;
+    // const expense = parseInt(TextAmm,10);
+    // totalExpense = totalExpense+expense;  
+    // hele.textContent = totalExpense;
+    // //   console.log(ctr);
+    // }
+    // const ele = document.querySelector("#btnCtr");
+    // ele.addEventListener("click",ctrinc,false)
+    let totalExpense=0;
+    const headingEl = document.querySelector("#headingTotal");
+    headingEl.textContent = totalExpense;
+    function addExpenseToTotal(){
+        const inputElement = document.querySelector("#inputAmmount");
+        const textAmount = inputElement.value;
+        const expense = parseInt(textAmount,10);
+        totalExpense = totalExpense+expense;  
+        headingEl.textContent = totalExpense;
+        //   console.log(ctr);
+    }
+    const ele = document.querySelector("#btnAddExpense");
+    ele.addEventListener("click",addExpenseToTotal,false)
+    
+    
+
+    
+    
+   
+    
+
+</script>
+</html>
